@@ -1,0 +1,61 @@
+/**
+Title: theme.css
+Author: Walter McCue
+Date: 10/29/23
+Description: Dark/Light Styles for the Professional Portfolio Site
+*/
+
+
+/** 
+Dark Theme
+*/
+body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #303030;
+    --heading-bkg: #000;
+    --heading-text: #000;
+    --heading-border: #000;
+    --anchor: #000;
+    --anchor-hover: #000;
+    --anchor-hover-bkg: #000;
+    --card-bkg: #000;
+
+
+}
+
+/** 
+Light Theme
+*/
+body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --heading-bkg: #000;
+    --heading-text: #000;
+    --heading-border: #000;
+    --anchor: #000;
+    --anchor-hover: #000;
+    --anchor-hover-bkg: #000;
+    --card-bkg: #000;
+}
+
+
+/** 
+Theme Styles
+*/
+body {
+    transition: background-color 1s;
+    background: var(--bkg-color);
+    color: var(--text-color)
+}
+
+#theme-toggle {
+    margin: .5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+  
+h1, p {
+    color: var(--text-color);
+}

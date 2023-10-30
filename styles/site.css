@@ -1,0 +1,12 @@
+/**
+Title: site.css
+Author: Walter McCue
+Date: 10/29/23
+Description: Global Styles for the Professional Portfolio Site
+*/
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}

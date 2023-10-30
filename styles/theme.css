@@ -12,12 +12,20 @@ Dark Theme
 body.dark-theme {
     --text-color: #eee;
     --bkg-color: #303030;
-    --heading-bkg: #000;
-    --heading-text: #000;
-    --heading-border: #000;
+    --heading-bkg: #0f6be9;
+    --heading-text: #eee;
+    --heading-border: #658dfe;
+    --nav-bkg: #303030;
+    --nav-text: #0f6be9;
+    --nav-btn-hover-bkg: #0f6be9;
+    --nav-btn-hover: #fff;
+    --nav-gradient: #000;
     --anchor: #000;
     --anchor-hover: #000;
     --anchor-hover-bkg: #000;
+    --heading-anchor: #000;
+    --heading-anchor-hover: #000;
+    --heading-anchor-hover-bkg: #000;
     --card-bkg: #000;
 
 
@@ -28,13 +36,21 @@ Light Theme
 */
 body.light-theme {
     --text-color: #222;
-    --bkg-color: #fff;
-    --heading-bkg: #000;
-    --heading-text: #000;
-    --heading-border: #000;
+    --bkg-color: #b2b2b2;
+    --heading-bkg: #043f8f;
+    --heading-text: #b2b2b2;
+    --heading-border: #0f6be9;
+    --nav-bkg: #b2b2b2;
+    --nav-text: #043f8f;
+    --nav-btn-hover-bkg: #043f8f;
+    --nav-btn-hover: #fff;
+    --nav-gradient: #fff;
     --anchor: #000;
     --anchor-hover: #000;
     --anchor-hover-bkg: #000;
+    --heading-anchor: #000;
+    --heading-anchor-hover: #000;
+    --heading-anchor-hover-bkg: #000;
     --card-bkg: #000;
 }
 
@@ -42,20 +58,99 @@ body.light-theme {
 /** 
 Theme Styles
 */
-body {
+* {
     transition: background-color 1s;
+}
+
+body {
     background: var(--bkg-color);
     color: var(--text-color)
 }
 
-#theme-toggle {
+header {
+    background: var(--heading-bkg);
+    border-bottom: 2px solid var(--heading-border);
+    color: var(--heading-text);
+}
+
+footer {
+    background: var(--heading-bkg);
+    border-top: 2px solid var(--heading-border);
+    color: var(--heading-text);
+}
+
+.headerBtn {
     margin: .5rem;
     padding: 0;
     background: transparent;
     border: none;
     font-size: 1.5rem;
 }
-  
-h1, p {
-    color: var(--text-color);
+
+/** 
+Navigational theme
+*/
+nav {
+    background-image: linear-gradient(var(--nav-gradient), transparent);
+    color: var(--nav-text);
 }
+
+nav a {
+    background-color: transparent;
+    color: var(--nav-text);
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border: var(--nav-text) .2rem solid;
+    border-radius: .5rem;
+    width: 8rem;
+    padding: .1rem;
+    margin-left: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 0 .2rem .1rem var(--nav-text), inset 0 0 .2rem .1rem var(--nav-text);
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    background: var(--nav-text);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.25rem) rotateX(40deg) scale(1, 0.35);
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    box-shadow: 0 0 1.25rem .75rem var(--nav-text);
+    opacity: 0.5;
+  }
+  
+nav a:hover,
+nav a:focus {
+    background: var(--nav-btn-hover-bkg);
+    color: var(--nav-btn-hover);
+    text-shadow: none;
+    outline: none;
+}
+  
+nav a:hover::before,
+nav a:hover::after,
+nav a:focus::before,
+nav a:focus::after {
+    opacity: 1;
+    outline: none;
+}
+  

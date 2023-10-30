@@ -10,3 +10,58 @@ Description: Global Styles for the Professional Portfolio Site
     box-sizing: border-box;
     font-family: 'Oswald', Verdana, Arial, sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    padding: .5rem;    
+}
+nav {
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    font-weight: bolder;
+    text-align: right;
+}
+
+#desktop {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+main {
+    height: 100vh;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.action {
+    float: right;
+}
+
+.interactive {
+    margin: .5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+}
+
+.center {
+    text-align: center;
+}

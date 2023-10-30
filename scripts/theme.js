@@ -8,7 +8,7 @@
 
 const btn = document.getElementById("theme-toggle");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-const setTheme = document.body.classList
+const setTheme = document.body.classList;
 const currentTheme = localStorage.getItem("theme");
 
 
@@ -19,7 +19,7 @@ function setDark() {
 }
 function setLight() {
   setTheme.toggle("light-theme");
-  btn.innerHTML = `<i class="fa-solid fa-sun" style="color: #000;"></i>`;
+  btn.innerHTML = `<i class="fa-solid fa-sun" ></i>`;
 }
 
 
@@ -44,7 +44,7 @@ function themeToggle() {
     localStorage.clear();
     localStorage.setItem("theme", "dark-theme");
   } else {
-    btn.innerHTML = `<i class="fa-solid fa-sun" style="color: #000;"></i>`;
+    btn.innerHTML = `<i class="fa-solid fa-sun" ></i>`;
     localStorage.clear();
     localStorage.setItem("theme", "light-theme");
   }

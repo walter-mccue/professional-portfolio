@@ -95,11 +95,18 @@ nav {
     color: var(--nav-text);
 }
 
+nav.mobile {
+    background: transparent;
+}
+
+.mobileMenu {
+    background: var(--nav-bkg);
+}
+
 nav a {
     background-color: transparent;
     color: var(--nav-text);
     display: inline-block;
-    text-decoration: none;
     cursor: pointer;
     border: var(--nav-text) .2rem solid;
     border-radius: .5rem;
@@ -112,7 +119,7 @@ nav a {
     position: relative;
 }
 
-nav a::before {
+nav.desktop a::before {
     content: "";
     pointer-events: none;
     position: absolute;

@@ -21,10 +21,11 @@ body {
 }
 
 header {
+    min-height: 10vh;
     margin: 0;
     padding: .5rem;    
 }
-nav {
+nav {    
     width: 100%;
     padding: 1rem;
     padding-bottom: 3rem;
@@ -32,22 +33,18 @@ nav {
     text-align: right;
 }
 
-#desktop {
-    display: block;
-}
-
-#mobile {
-    display: none;
-}
-
 main {
-    height: 100vh;
+    min-height: 80vh;
 }
 
 footer {
+    min-height: 10vh;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+a {
+    text-decoration: none;
 }
 
 .action {

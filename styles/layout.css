@@ -1,0 +1,61 @@
+/**
+Title: layout.css
+Author: Walter McCue
+Date: 11/1/23
+Description: Responsive Styles for the Professional Portfolio Site
+*/
+
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+nav.mobile a {
+  margin: auto;
+}
+
+.mobileNav {
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.mobileMenu {
+  visibility: hidden;
+  position: absolute;
+  right: 0rem;
+  margin: auto;
+  width: auto;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.mobileMenu ul {
+  list-style-type: none;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.mobileMenu ul li {
+  padding: .5rem;
+}
+
+.mobileNav:hover .mobileMenu,
+.mobileNav:focus .mobileMenu,
+.mobileNav:focus-within .mobileMenu {
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .desktop {
+      display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}

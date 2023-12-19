@@ -68,10 +68,10 @@ section {
     padding: 0 1rem;
 }
 
-.container {
+.card-container {
     display: flex;
     gap: 2rem;
-    
+    justify-content: center;
 }
 
 .card {
@@ -81,14 +81,45 @@ section {
     transition: 0.3s;
     transition: transform 0.2s ease-in;
     animation: slideInFromBottom 1s ease-in;
-    width: 100%;
+    width: 20%;
     height: 50vh;
 }
-
 
 .card:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     transform: translateY(-10px);
+}
+
+.home-container {
+    margin-left: 25rem;
+}
+
+.proficiencies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 3rem;
+    position: relative;
+}
+
+.icon::before {
+    content: attr(aria-label);
+    position: absolute;
+    top: -2rem;
+    left: -.5rem;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+.icon:hover::before {
+    visibility: visible;
+    transition: 0.2s ease-in;
 }
 
 @keyframes slideInFromRight {

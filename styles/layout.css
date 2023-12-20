@@ -51,11 +51,48 @@ nav.mobile a {
 }
 
 
+section {
+  padding: 1rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  
+}
+
+.card {
+  padding: .5rem;
+  border-radius: .75rem;
+  box-shadow: .25rem .5rem .75rem .25rem rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  transition: transform 0.2s ease-in;
+  animation: slideInFromBottom 1s ease-in;
+  width: 30%;
+  min-height: 50vh;
+}
+
+
 @media screen and (max-width: 1000px) {
   .desktop {
       display: none;
   }
   .mobile {
     display: block;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
   }
 }
